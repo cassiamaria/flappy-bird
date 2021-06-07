@@ -9,11 +9,11 @@
 
 [wm-flappy] {
     position: relative;
-    border: 5px solid dodgerblue;
+    border: 5px solid #18245c;
     height: 700px;
     width: 1200px;
     margin: 15px;
-    background: deepskyblue;
+    background: url('../images/sky.jpg');
     overflow: hidden;
 }
 
@@ -41,14 +41,14 @@
 .barreira .borda {
     height: 30px;
     width: 130px;
-    background: linear-gradient(90deg, #639301, #a5e82e);
+    background: linear-gradient(90deg, #2a41aa, #2da2f0);
     border: 2px solid #000;
 }
 
 .barreira .corpo {
     height: 150px;
     width: 110px;
-    background: linear-gradient(90deg, #639301, #a5e82e);
+    background: linear-gradient(90deg, #2a41aa, #2da2f0);
     border-left: 2px solid #000;
     border-right: 2px solid #000;
 }
@@ -60,4 +60,26 @@
     right: 10px;
     font-family: Pixel;
     font-size: 70px;
+}
+
+.restart {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart button {
+    z-index: 1;
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.restart button:hover {
+    background: #c3e2ff;
 }

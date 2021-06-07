@@ -55,7 +55,7 @@ function ConjuntoBarreiras(altura, largura, abertura, espaco, notificarPontos) {
         this.pares.forEach(par => {
             par.setX(par.getX() - deslocamento)
 
-            //quando o elemento sair da àrea do jogo
+            //quando o elemento sair da área do jogo
             if(par.getX() < -par.getLargura()) {
                 par.setX(par.getX() + espaco * this.pares.length)
                 par.sortearAbertura()
@@ -82,7 +82,7 @@ function Passaro(alturaJogo) {
     window.onkeyup = e => voando = false
 
     this.animar = () => {
-        const novoY = this.getY() + (voando ? 8 : -5)
+        const novoY = this.getY() + (voando ? 8 : -4)
         const alturaMaxima = alturaJogo - this.elemento.clientHeight
 
         if (novoY <= 0) {
@@ -156,6 +156,8 @@ function FlappyBird() {
 
             if (colisao(passaro, barreiras)) {
                 clearInterval(temporizador)
+                const refreshGame = document.querySelector('.restart')
+                refreshGame.style.display = "flex"
             }
         }, 20)
     }
